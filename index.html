@@ -51,6 +51,35 @@
             letter-spacing: 1.5px;
         }
 
+        /* İndirme Banner Alanı */
+        .download-banner {
+            background: linear-gradient(135deg, rgba(226, 176, 114, 0.15), rgba(18, 14, 24, 0.9));
+            border: 1px solid rgba(226, 176, 114, 0.3);
+            border-radius: 16px;
+            padding: 22px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        .download-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            padding: 12px 30px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 15px;
+            text-decoration: none;
+            margin-top: 12px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(226, 176, 114, 0.4);
+        }
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(226, 176, 114, 0.6);
+            text-decoration: none;
+        }
+
         /* Hızlı Atlama Çubuğu */
         .quick-nav {
             display: flex;
@@ -161,6 +190,13 @@
         <div class="brand-subtitle">KOZMİK REHBERLİK & SEZGİSEL SEANS</div>
     </header>
 
+    <!-- Doğrudan Google Play Yönlendirme Alanı -->
+    <div class="download-banner">
+        <p style="margin-bottom: 4px; font-size: 15px; color: var(--heading-color);"><strong>Nevori'yi cebinize taşıyın</strong></p>
+        <p style="margin-bottom: 0; font-size: 13px; color: var(--text-color);">Yapay zeka destekli kozmik rehberliği hemen keşfedin.</p>
+        <a href="https://play.google.com/store/apps/details?id=com.nevori.app&hl=tr" class="download-btn" target="_blank">Google Play'den İndir</a>
+    </div>
+
     <div class="quick-nav">
         <a href="#gizlilik">↓ Gizlilik Politikası</a>
         <a href="#kullanim-kosullari">↓ Kullanım Koşulları (EULA)</a>
@@ -249,7 +285,7 @@
     <hr class="divider">
 
     <!-- ========================================== -->
-    <!-- BÖLÜM 2: KULLANIM KOŞULLARI (EULA)        -->
+    <!-- BÖLÜM 2: KULLANIM KOŞULLARI (EULA)         -->
     <!-- ========================================== -->
     <section id="kullanim-kosullari">
         <h1>Nevori Kullanım Koşulları (EULA)</h1>
