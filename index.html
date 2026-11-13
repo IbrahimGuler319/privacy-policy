@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nevori - Gizlilik Politikası ve Kullanım Koşulları</title>
+    <title>İbrahim Güler Uygulamaları - Gizlilik ve Kullanım Koşulları</title>
     <style>
         :root {
             --bg-color: #07050a;
@@ -13,13 +13,7 @@
             --accent-color: #e2b072;
             --border-color: rgba(255, 255, 255, 0.08);
         }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.75;
@@ -30,12 +24,7 @@
             color: var(--text-color);
             -webkit-font-smoothing: antialiased;
         }
-
-        header {
-            text-align: center;
-            margin-bottom: 24px;
-        }
-
+        header { text-align: center; margin-bottom: 24px; }
         .brand-title {
             color: var(--heading-color);
             font-size: 32px;
@@ -44,14 +33,39 @@
             text-transform: uppercase;
             margin-bottom: 6px;
         }
+        .brand-subtitle { color: #8c839f; font-size: 13px; letter-spacing: 1.5px; }
 
-        .brand-subtitle {
-            color: #8c839f;
-            font-size: 13px;
-            letter-spacing: 1.5px;
+        .app-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
         }
+        .app-tab {
+            padding: 10px 24px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            border: 1px solid var(--border-color);
+            background: var(--card-bg);
+            color: #8c839f;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+        .app-tab.active, .app-tab:hover {
+            background: var(--accent-color);
+            color: var(--bg-color);
+            border-color: var(--accent-color);
+        }
+        .shelter-tab.active, .shelter-tab:hover {
+            background: #FFA447 !important;
+            border-color: #FFA447 !important;
+        }
+        .app-panel { display: none; }
+        .app-panel.active { display: block; }
 
-        /* İndirme Banner Alanı */
         .download-banner {
             background: linear-gradient(135deg, rgba(226, 176, 114, 0.15), rgba(18, 14, 24, 0.9));
             border: 1px solid rgba(226, 176, 114, 0.3);
@@ -60,6 +74,10 @@
             text-align: center;
             margin-bottom: 30px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        .shelter-banner {
+            background: linear-gradient(135deg, rgba(255, 164, 71, 0.15), rgba(18, 14, 24, 0.9));
+            border-color: rgba(255, 164, 71, 0.3);
         }
         .download-btn {
             display: inline-block;
@@ -74,13 +92,8 @@
             transition: transform 0.2s, box-shadow 0.2s;
             box-shadow: 0 4px 15px rgba(226, 176, 114, 0.4);
         }
-        .download-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(226, 176, 114, 0.6);
-            text-decoration: none;
-        }
+        .download-btn:hover { transform: translateY(-2px); text-decoration: none; }
 
-        /* Hızlı Atlama Çubuğu */
         .quick-nav {
             display: flex;
             justify-content: center;
@@ -90,8 +103,8 @@
             background: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 16px;
+            flex-wrap: wrap;
         }
-
         .quick-nav a {
             padding: 8px 16px;
             color: var(--accent-color);
@@ -101,10 +114,7 @@
             border-radius: 10px;
             transition: background 0.2s;
         }
-
-        .quick-nav a:hover {
-            background: rgba(226, 176, 114, 0.12);
-        }
+        .quick-nav a:hover { background: rgba(226, 176, 114, 0.12); }
 
         h1 {
             color: var(--accent-color);
@@ -114,7 +124,6 @@
             padding-bottom: 8px;
             border-bottom: 1px solid var(--border-color);
         }
-
         h2 {
             color: var(--heading-color);
             font-size: 18px;
@@ -123,28 +132,10 @@
             border-left: 3px solid var(--accent-color);
             padding-left: 12px;
         }
-
-        p, li {
-            font-size: 14.5px;
-            color: var(--text-color);
-            margin-bottom: 12px;
-        }
-
-        ul {
-            padding-left: 22px;
-            margin-bottom: 16px;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        .meta-info {
-            font-size: 13px;
-            color: #8c839f;
-            margin-bottom: 20px;
-        }
-
+        p, li { font-size: 14.5px; color: var(--text-color); margin-bottom: 12px; }
+        ul { padding-left: 22px; margin-bottom: 16px; }
+        li { margin-bottom: 8px; }
+        .meta-info { font-size: 13px; color: #8c839f; margin-bottom: 20px; }
         .highlight-box {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
@@ -152,27 +143,10 @@
             padding: 18px 22px;
             margin: 20px 0;
         }
-
-        .divider {
-            border: none;
-            height: 1px;
-            background: var(--border-color);
-            margin: 60px 0;
-        }
-
-        strong {
-            color: var(--heading-color);
-        }
-
-        a {
-            color: var(--accent-color);
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
+        .divider { border: none; height: 1px; background: var(--border-color); margin: 60px 0; }
+        strong { color: var(--heading-color); }
+        a { color: var(--accent-color); text-decoration: none; }
+        a:hover { text-decoration: underline; }
         footer {
             margin-top: 50px;
             text-align: center;
@@ -185,36 +159,37 @@
 </head>
 <body>
 
-    <header>
-        <div class="brand-title">NEVORİ</div>
-        <div class="brand-subtitle">KOZMİK REHBERLİK & SEZGİSEL SEANS</div>
-    </header>
+<header>
+    <div class="brand-title">İBRAHİM GÜLER</div>
+    <div class="brand-subtitle">MOBİL UYGULAMALAR — GİZLİLİK & KULLANIM KOŞULLARI</div>
+</header>
 
-    <!-- Doğrudan Google Play Yönlendirme Alanı -->
+<div class="app-tabs">
+    <a href="#" class="app-tab active" onclick="showApp('nevori',this);return false;">🔮 Nevori</a>
+    <a href="#" class="app-tab shelter-tab" onclick="showApp('shelter',this);return false;">🐾 Shelter Smash</a>
+</div>
+
+<!-- ===== NEVORİ ===== -->
+<div id="panel-nevori" class="app-panel active">
+
     <div class="download-banner">
-        <p style="margin-bottom: 4px; font-size: 15px; color: var(--heading-color);"><strong>Nevori'yi cebinize taşıyın</strong></p>
-        <p style="margin-bottom: 0; font-size: 13px; color: var(--text-color);">Yapay zeka destekli kozmik rehberliği hemen keşfedin.</p>
+        <p style="margin-bottom:4px;font-size:15px;color:var(--heading-color);"><strong>Nevori'yi cebinize taşıyın</strong></p>
+        <p style="margin-bottom:0;font-size:13px;">Yapay zeka destekli kozmik rehberliği hemen keşfedin.</p>
         <a href="https://play.google.com/store/apps/details?id=com.nevori.app&hl=tr" class="download-btn" target="_blank">Google Play'den İndir</a>
     </div>
 
     <div class="quick-nav">
-        <a href="#gizlilik">↓ Gizlilik Politikası</a>
-        <a href="#kullanim-kosullari">↓ Kullanım Koşulları (EULA)</a>
+        <a href="#nevori-gizlilik">↓ Gizlilik Politikası</a>
+        <a href="#nevori-eula">↓ Kullanım Koşulları (EULA)</a>
     </div>
 
-    <!-- ========================================== -->
-    <!-- BÖLÜM 1: GİZLİLİK POLİTİKASI              -->
-    <!-- ========================================== -->
-    <section id="gizlilik">
+    <section id="nevori-gizlilik">
         <h1>Nevori Gizlilik Politikası</h1>
         <div class="meta-info">Yürürlük Tarihi: 4 Ekim 2026 | Sürüm: 1.0.0</div>
-
         <p>Nevori ("biz", "bizim" veya "Uygulama"), kullanıcılarımızın ("Kullanıcı", "siz") gizlilik haklarına derin saygı duyar. Bu Gizlilik Politikası, Nevori mobil uygulamasını kullandığınızda hangi kişisel verilerin toplandığını, nasıl saklandığını, işlendiğini ve üçüncü taraf servis sağlayıcılar aracılığıyla nasıl korunduğunu ayrıntılı biçimde açıklar.</p>
-
         <div class="highlight-box">
             <strong>Özet Beyan:</strong> Nevori, fincan görsellerinizi asla reklam hedeflemesi amacıyla kullanmaz veya sunucularında kalıcı olarak depolamaz. Paylaştığınız kişisel sırlar, seans sohbetleri ve yaşam detayları üçüncü taraflara satılmaz ve model eğitimi için kullanılmaz.
         </div>
-
         <h2>1. Toplanan Kişisel Veriler</h2>
         <p>Uygulamayı kullanırken sunduğumuz deneyimin kişiselleştirilmesi amacıyla aşağıdaki veriler toplanmaktadır:</p>
         <ul>
@@ -224,7 +199,6 @@
             <li><strong>Seans ve Fal Verileri:</strong> Çektiğiniz 3 kart tarot kayıtları, seçilen kozmik odaklar, tespit edilen telve sembolleri ve interaktif rehberlik seanslarındaki mesaj geçmişi.</li>
             <li><strong>Teknik Cihaz ve Analitik Veriler:</strong> Cihaz modeli, işletim sistemi sürümü, saat dilimi ve uygulama performansı/çökme logları.</li>
         </ul>
-
         <h2>2. Kamera ve Görsel Verilerinin İşlenme Esasları</h2>
         <p>Kahve falı modülünde cihazınızın kamerasına ve fotoğraf galerisine erişim izni talep edilir:</p>
         <ul>
@@ -232,7 +206,6 @@
             <li>Görseller sunucularımızda kalıcı bir veritabanında <strong>saklanmaz</strong>. Analiz işlemi tamamlandıktan hemen sonra geçici bellekten silinir.</li>
             <li>Fotoğraflarınız hiçbir suretle yüz tanıma, biyometrik veri toplama veya reklam hedefleme amacıyla işlenmez.</li>
         </ul>
-
         <h2>3. Yapay Zeka (AI) ve Büyük Dil Modellerinin (LLM) Kullanımı</h2>
         <p>Nevori, fal sentezi ve sezgisel rehberlik üretiminde <strong>Google Gemini API (Gemini 3.1 Flash-Lite)</strong> altyapısından faydalanır:</p>
         <ul>
@@ -240,14 +213,12 @@
             <li>Kurumsal API lisansımız gereği, Google bu verileri genel kamuya açık yapay zeka modellerini eğitmek veya geliştirmek amacıyla <strong>kullanmaz</strong>.</li>
             <li>Üretilen yorumlar algoritmik bir sezgi simülasyonu olup tıbbi, hukuki veya finansal bağlayıcılık taşımaz.</li>
         </ul>
-
         <h2>4. Reklamlar ve Takip (App Tracking Transparency & AdMob)</h2>
         <p>Nevori, ücretsiz kullanım kotalarını finanse etmek amacıyla <strong>Google AdMob</strong> reklam ağını kullanır:</p>
         <ul>
             <li><strong>Ödüllü ve Geçiş Reklamları:</strong> Seans hakkı kazanmak veya fal kilidini açmak için ödüllü video reklamlar görüntülenir.</li>
             <li><strong>Apple ATT İzni (iOS):</strong> iOS 14.5 ve üzeri cihazlarda, reklamların ilgi alanlarınıza uygun kişiselleştirilebilmesi için Uygulama Takip Şeffaflığı (ATT) izni sorulur. Kullanıcı bu izni reddettiğinde de uygulama eksiksiz çalışmaya devam eder; yalnızca kişiselleştirilmemiş jenerik reklamlar gösterilir.</li>
         </ul>
-
         <h2>5. Üçüncü Taraf Altyapı Sağlayıcılar</h2>
         <p>Verileriniz yalnızca uygulamanın kesintisiz çalışması için gerekli olan şu küresel sağlayıcıların güvenli altyapılarında işlenir:</p>
         <ul>
@@ -256,25 +227,19 @@
             <li><strong>Google Mobile Ads (AdMob):</strong> Reklam gösterim hizmeti.</li>
             <li><strong>Apple Inc.:</strong> Sign in with Apple kimlik doğrulama altyapısı.</li>
         </ul>
-
         <h2>6. Veri Güvenliği ve Saklama Süresi</h2>
         <p>Tüm kullanıcı verileri, iletim sırasında HTTPS/TLS şifreleme protokolleri ile ve Firestore üzerinde endüstri standardı güvenlik kuralları altında korunur. Kullanıcı oturumu açık kaldığı müddetçe yaşam dosyası ve geçmiş fal kayıtları profilinizde saklanır.</p>
-
         <h2>7. Hesap Silme ve Verilerin Kalıcı Olarak Yok Edilmesi (Right to be Forgotten)</h2>
         <p>Apple App Store ve Google Play yönergeleri doğrultusunda, kullanıcılar istedikleri an hiçbir onay beklemeden tüm verilerini silebilirler:</p>
         <ul>
-            <li>Uygulama içerisinden <strong>Profil > Kader Bağını Kopar ve Hesabı Sil</strong> butonuna tıklandığında;</li>
+            <li>Uygulama içerisinden <strong>Profil &gt; Kader Bağını Kopar ve Hesabı Sil</strong> butonuna tıklandığında;</li>
             <li>Kullanıcının Firebase Auth oturumu, Firestore veritabanındaki tüm tarot geçmişi, telve kayıtları, hafıza dosyası ve profil bilgileri <strong>anında, geri döndürülemez biçimde ve tamamen silinir</strong>.</li>
         </ul>
-
         <h2>8. Çocukların Gizliliği</h2>
         <p>Nevori, 13 yaşın (veya bulunduğunuz ülkedeki geçerli yasal yaş sınırının) altındaki çocuklara yönelik olarak tasarlanmamıştır. Bilerek çocuklardan kişisel veri toplamayız. Bu durumun tespiti halinde ilgili veriler derhal sistemlerimizden temizlenir.</p>
-
         <h2>9. Politika Değişiklikleri</h2>
         <p>Gizlilik Politikamız yasal düzenlemeler veya yeni uygulama özellikleri doğrultusunda güncellenebilir. Değişiklikler bu web sayfası üzerinden güncel yürürlük tarihiyle yayınlanacaktır.</p>
-
         <h2>10. İletişim Bilgileri</h2>
-        <p>Gizlilik uygulamalarımız, kişisel verileriniz veya hesap silme taleplerinizle ilgili her türlü soru için bizimle doğrudan iletişime geçebilirsiniz:</p>
         <ul>
             <li><strong>Geliştirici / Veri Sorumlusu:</strong> İbrahim Güler</li>
             <li><strong>E-posta:</strong> <a href="mailto:info.ibrahimguler@gmail.com">info.ibrahimguler@gmail.com</a></li>
@@ -284,49 +249,121 @@
 
     <hr class="divider">
 
-    <!-- ========================================== -->
-    <!-- BÖLÜM 2: KULLANIM KOŞULLARI (EULA)         -->
-    <!-- ========================================== -->
-    <section id="kullanim-kosullari">
+    <section id="nevori-eula">
         <h1>Nevori Kullanım Koşulları (EULA)</h1>
         <div class="meta-info">Son Güncelleme: 4 Ekim 2026 | Sürüm: 1.0.0</div>
-
         <p>Bu Kullanım Koşulları ve Son Kullanıcı Lisans Sözleşmesi ("Sözleşme"), Nevori mobil uygulamasının kullanım şartlarını belirler. Uygulamayı indirerek veya kullanarak bu şartları peşinen kabul etmiş sayılırsınız.</p>
-
         <div class="highlight-box">
             <strong>Yasal Sorumluluk Reddi (Disclaimer):</strong> Nevori, eğlence ve kişisel farkındalık odaklı bir yapay zeka deneyim uygulamasıdır. Uygulama içerisindeki hiçbir fal yorumu, tarot sentezi veya seans diyaloğu tıbbi, psikiyatrik, hukuki veya finansal bir tavsiye ya da teşhis niteliği taşımaz. Gerçek yaşam kararlarınızın sorumluluğu tamamen şahsınıza aittir.
         </div>
-
         <h2>1. Yapay Zeka Çıktıları ve Doğruluk Payı</h2>
         <ul>
             <li>Nevori, büyük dil modelleri (LLM) tarafından beslenen sezgisel bir kurgu motorudur.</li>
             <li>Yapay zeka modelleri bazen gerçek dışı, metaforik veya yanıltıcı ifadeler ("halüsinasyon") üretebilir. Kullanıcı bu çıktılara dayanarak kesin yargılara varmayacağını kabul eder.</li>
         </ul>
-
         <h2>2. Kullanıcı Davranış Kuralları ve Yasaklar</h2>
-        <p>Uygulamadaki seans girişlerinde ve profil alanlarında kullanıcılar aşağıdaki fiillerden kaçınmakla yükümlüdür:</p>
         <ul>
             <li>Şiddet, nefret söylemi, ırkçılık veya yasa dışı unsurlar içeren ifadeler kullanmak.</li>
             <li>Kendine zarar verme veya başkalarını tehdit etme amaçlı istemler oluşturmak.</li>
             <li>Uygulama altyapısına, API mekanizmalarına veya güvenlik kontrollerine tersine mühendislik (reverse engineering) uygulamak.</li>
         </ul>
-
         <h2>3. Kotalar, Limitler ve Reklam Modeli</h2>
         <ul>
             <li>Nevori, günlük kotalarla sınırlanmış reklam destekli bir model sunar (günlük 1 fincan, 1 tarot ve 2 kullanıcı mesajı).</li>
             <li>Kota tamamlandığında gece yarısı (00:00) yerel saatine kadar kilit devreye girer. Reklam engelleyici veya hileli yöntemlerle kilitlerin aşılması yasaktır.</li>
         </ul>
-
         <h2>4. Apple Standart Lisans Sözleşmesi</h2>
         <p>Apple iOS platformu kullanıcıları için bu metne ek olarak <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">Apple Standart Son Kullanıcı Lisans Sözleşmesi (Standard EULA)</a> hükümleri geçerlidir.</p>
-
         <h2>5. İletişim</h2>
         <p>Kullanım şartları ve lisans konuları hakkındaki talepleriniz için: <a href="mailto:info.ibrahimguler@gmail.com">info.ibrahimguler@gmail.com</a></p>
     </section>
+</div>
 
-    <footer>
-        &copy; 2026 Nevori. Tüm hakları saklıdır. Geliştirici: İbrahim Güler.
-    </footer>
+<!-- ===== SHELTER SMASH ===== -->
+<div id="panel-shelter" class="app-panel">
+
+    <div class="download-banner shelter-banner">
+        <p style="margin-bottom:4px;font-size:15px;color:var(--heading-color);"><strong>🐾 Shelter Smash</strong></p>
+        <p style="margin-bottom:0;font-size:13px;">Tuğlaları kır, askerleri yen, hayvanları kurtar!</p>
+    </div>
+
+    <div class="quick-nav">
+        <a href="#shelter-gizlilik">↓ Gizlilik Politikası</a>
+        <a href="#shelter-eula">↓ Kullanım Koşulları</a>
+    </div>
+
+    <section id="shelter-gizlilik">
+        <h1>Shelter Smash Gizlilik Politikası</h1>
+        <div class="meta-info">Yürürlük Tarihi: 14 Kasım 2026 | Sürüm: 1.0.0</div>
+        <p>Shelter Smash ("Uygulama", "biz"), kullanıcılarımızın ("Kullanıcı", "siz") gizlilik haklarına saygı duyar. Bu Gizlilik Politikası, Uygulamayı kullanırken hangi verilerin toplandığını ve nasıl kullanıldığını açıklar.</p>
+        <div class="highlight-box">
+            <strong>Özet:</strong> Shelter Smash kullanıcı hesabı oluşturmaz, kişisel bilgi toplamaz ve hiçbir veriyi üçüncü taraflara satmaz. Oyun tamamen cihazınızda çalışır.
+        </div>
+        <h2>1. Toplanan Veriler</h2>
+        <p>Shelter Smash, oynamak için hesap veya kayıt gerektirmez. Yalnızca şu veriler saklanır:</p>
+        <ul>
+            <li><strong>Oyun İlerleme Verisi:</strong> Tamamlanan bölümler, kazanılan yıldızlar, altın miktarı ve koleksiyon durumu. Bu veriler yalnızca cihazınızın yerel depolama alanında tutulur.</li>
+            <li><strong>Dil Tercihi:</strong> Türkçe/İngilizce seçiminiz cihazınızda saklanır.</li>
+            <li><strong>Reklam İzleme (ATT):</strong> iOS cihazlarda, ilgi alanlarınıza uygun reklam gösterilebilmesi için ATT izni istenebilir. Bu izni reddettiğinizde uygulama eksiksiz çalışır; yalnızca kişiselleştirilmemiş reklamlar gösterilir.</li>
+        </ul>
+        <h2>2. Google AdMob Reklamları</h2>
+        <p>Uygulama ücretsiz olup Google AdMob reklam ağı aracılığıyla finanse edilmektedir.</p>
+        <ul>
+            <li>AdMob; cihaz modeli, IP adresi ve reklam etkileşim verileri gibi teknik bilgileri kendi gizlilik politikası kapsamında toplayabilir.</li>
+            <li>Daha fazla bilgi: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></li>
+        </ul>
+        <h2>3. Sunucu ve Bulut</h2>
+        <p>Oyun ilerlemesi veya profil verisi herhangi bir sunucuya gönderilmez. Tüm veriler cihazınızda yerel olarak saklanır.</p>
+        <h2>4. Çocukların Gizliliği</h2>
+        <p>Shelter Smash 9 yaş ve üzeri kullanıcılar için tasarlanmıştır. 13 yaşın altındaki kullanıcılardan bilerek kişisel veri toplamıyoruz.</p>
+        <h2>5. Veri Silme</h2>
+        <p>Oyun verilerinizi silmek için uygulamayı cihazınızdan kaldırmanız yeterlidir. Sunucuda saklanan herhangi bir kişisel veriniz bulunmamaktadır.</p>
+        <h2>6. Politika Değişiklikleri</h2>
+        <p>Gizlilik Politikamız güncellenebilir. Değişiklikler bu sayfa üzerinden yürürlük tarihiyle birlikte yayınlanır.</p>
+        <h2>7. İletişim</h2>
+        <ul>
+            <li><strong>Geliştirici:</strong> İbrahim Güler</li>
+            <li><strong>E-posta:</strong> <a href="mailto:info.ibrahimguler@gmail.com">info.ibrahimguler@gmail.com</a></li>
+        </ul>
+    </section>
+
+    <hr class="divider">
+
+    <section id="shelter-eula">
+        <h1>Shelter Smash Kullanım Koşulları (EULA)</h1>
+        <div class="meta-info">Son Güncelleme: 14 Kasım 2026 | Sürüm: 1.0.0</div>
+        <p>Shelter Smash'i indirerek veya kullanarak aşağıdaki koşulları kabul etmiş sayılırsınız.</p>
+        <h2>1. Lisans</h2>
+        <p>İbrahim Güler ("Geliştirici"), size Shelter Smash'i kişisel, ticari olmayan amaçlarla kullanmak için sınırlı, devredilemez bir lisans vermektedir. Uygulamayı kopyalamak, dağıtmak veya tersine mühendislik uygulamak yasaktır.</p>
+        <h2>2. Sanal Para Birimi</h2>
+        <p>Oyun içi altınlar yalnızca oyun deneyimi amacıyla kullanılır; gerçek para değeri taşımaz, satılamaz veya transfer edilemez.</p>
+        <h2>3. Reklamlar</h2>
+        <p>Uygulama ücretsizdir ve reklam içermektedir. Reklam engelleme araçları kullanmak yasaktır.</p>
+        <h2>4. Sorumluluk Sınırı</h2>
+        <p>Uygulama "olduğu gibi" sunulmaktadır. Geliştirici, oyun verisinin kaybolmasından veya hizmet kesintilerinden sorumlu tutulamaz.</p>
+        <h2>5. Apple Standart Lisans Sözleşmesi</h2>
+        <p>iOS kullanıcıları için <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">Apple Standart EULA</a> hükümleri geçerlidir.</p>
+        <h2>6. Değişiklikler</h2>
+        <p>Geliştirici bu koşulları önceden bildirmeksizin değiştirebilir. Güncel koşullar her zaman bu sayfada yer alır.</p>
+    </section>
+</div>
+
+<footer>
+    &copy; 2026 İbrahim Güler. Tüm hakları saklıdır.
+</footer>
+
+<script>
+    function showApp(app, el) {
+        document.querySelectorAll('.app-panel').forEach(p => p.classList.remove('active'));
+        document.querySelectorAll('.app-tab').forEach(t => t.classList.remove('active'));
+        document.getElementById('panel-' + app).classList.add('active');
+        el.classList.add('active');
+    }
+    const params = new URLSearchParams(location.search);
+    if (params.get('app') === 'shelter') {
+        showApp('shelter', document.querySelector('.shelter-tab'));
+    }
+</script>
 
 </body>
 </html>
